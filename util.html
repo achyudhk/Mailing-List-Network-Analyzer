@@ -270,18 +270,18 @@ This function is used to read those set number of lines and return them.</p>
 </div>
 <div class="section" id="module-util.union_find">
 <span id="util-union-find-module"></span><h2>util.union_find module<a class="headerlink" href="#module-util.union_find" title="Permalink to this headline">¶</a></h2>
-<p>Union Find algorithm with path compression
-A disjoint-set data structure, also called union-find data structure
-implements two functions:
-union(A, B) - merge A’s set with B’s set
-find(A) - finds what set A belongs to
+<p>This module is an implementation of the Union Find algorithm with path compression.
+The union-find data structure is also called a disjoint-set data structure.
 Union with path compression approach:
 Each node visited on the way to a root node may as well be attached
 directly to the root node.
 attach the smaller tree to the root of the larger tree
 Time Complexity  :  O(a(n)), where a(n) is the inverse of the function
-n=f(x)=A(x,x) and A is the extremely fast-growing Ackermann function.
-.. note:: Source: <a class="reference external" href="https://github.com/nryoung/algorithms/blob/master/algorithms/data_structures/union_find_with_path_compression.py">https://github.com/nryoung/algorithms/blob/master/algorithms/data_structures/union_find_with_path_compression.py</a></p>
+n=f(x)=A(x,x) and A is the extremely fast-growing Ackermann function</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Source: <a class="reference external" href="https://github.com/nryoung/algorithms/blob/master/algorithms/data_structures/union_find_with_path_compression.py">https://github.com/nryoung/algorithms/blob/master/algorithms/data_structures/union_find_with_path_compression.py</a></p>
+</div>
 <dl class="class">
 <dt id="util.union_find.UnionFind">
 <em class="property">class </em><code class="descclassname">util.union_find.</code><code class="descname">UnionFind</code><span class="sig-paren">(</span><em>N</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/union_find.html#UnionFind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.union_find.UnionFind" title="Permalink to this definition">¶</a></dt>
@@ -289,27 +289,70 @@ n=f(x)=A(x,x) and A is the extremely fast-growing Ackermann function.
 <dl class="method">
 <dt id="util.union_find.UnionFind.find">
 <code class="descname">find</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/union_find.html#UnionFind.find"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.union_find.UnionFind.find" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Helper function to find which set x belongs to</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> – An integer whose set you want to merge</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The outermost parent set to which x belongs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="util.union_find.UnionFind.is_connected">
 <code class="descname">is_connected</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/union_find.html#UnionFind.is_connected"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.union_find.UnionFind.is_connected" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Check if the sets of x and y are connected in the disjoint set data structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if if x and y are connected</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="util.union_find.UnionFind.make_set">
 <code class="descname">make_set</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/union_find.html#UnionFind.make_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.union_find.UnionFind.make_set" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Create a set with x as the only element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> – An  integer that would be the singleton element of the newly created set</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="util.union_find.UnionFind.parent">
 <code class="descname">parent</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/union_find.html#UnionFind.parent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.union_find.UnionFind.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Used for unit testing check if the path is compressed</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="util.union_find.UnionFind.union">
 <code class="descname">union</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/union_find.html#UnionFind.union"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.union_find.UnionFind.union" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Merge x’s set with y’s set</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> – An integer whose set you want to merge</li>
+<li><strong>y</strong> – Another integer whose set you want to merge</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
