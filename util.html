@@ -55,7 +55,7 @@
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-util.author">
-<span id="util-author-uid-map-module"></span><h2>util.author_uid_map module<a class="headerlink" href="#module-util.author" title="Permalink to this headline">¶</a></h2>
+<span id="util-author-module"></span><h2>util.author module<a class="headerlink" href="#module-util.author" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="util.author.get_uid_map">
 <code class="descclassname">util.author.</code><code class="descname">get_uid_map</code><span class="sig-paren">(</span><em>write_to_file=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/author.html#get_uid_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.author.get_uid_map" title="Permalink to this definition">¶</a></dt>
@@ -72,22 +72,42 @@ generated are used in other modules like the generation and statistical analysis
 <p>A list of custom stop words specific to developer mailing lists under custom_words and commonly used words under common_words</p>
 </div>
 <div class="section" id="module-util.graph">
-<span id="util-graph-leaf-nodes-module"></span><h2>util.graph_leaf_nodes module<a class="headerlink" href="#module-util.graph" title="Permalink to this headline">¶</a></h2>
+<span id="util-graph-module"></span><h2>util.graph module<a class="headerlink" href="#module-util.graph" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="util.graph.get_current_leaf_nodes">
 <code class="descclassname">util.graph.</code><code class="descname">get_current_leaf_nodes</code><span class="sig-paren">(</span><em>list1</em>, <em>list2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/graph.html#get_current_leaf_nodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.graph.get_current_leaf_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function eliminates the non-leaf message-ids from the list of leaf message ids.
-:param list1: List containing all nodes
-:param list2: Reference list
-:return: List without non-leaf nodes</p>
+<dd><p>This function eliminates the non-leaf message-ids from the list of leaf message ids.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>list1</strong> – List containing all nodes</li>
+<li><strong>list2</strong> – Reference list</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">List without non-leaf nodes</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="util.graph.get_leaf_nodes">
 <code class="descclassname">util.graph.</code><code class="descname">get_leaf_nodes</code><span class="sig-paren">(</span><em>write_to_file=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/graph.html#get_leaf_nodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.graph.get_leaf_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to compute the message-ids of leaf nodes in the thread graph.
-:param write_to_file: If true, writes a list of leaf nodes to graph_leaf_nodes.csv (default = True)
-:return: List of message-ids of leaf nodes</p>
+<dd><p>This function is used to compute the message-ids of leaf nodes in the thread graph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>write_to_file</strong> – If true, writes a list of leaf nodes to graph_leaf_nodes.csv (default = True)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of message-ids of leaf nodes</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -116,7 +136,7 @@ the elements of the list in a single line.</p>
 
 </div>
 <div class="section" id="module-util.preprocess">
-<span id="util-preprocessing-utils-module"></span><h2>util.preprocessing_utils module<a class="headerlink" href="#module-util.preprocess" title="Permalink to this headline">¶</a></h2>
+<span id="util-preprocess-module"></span><h2>util.preprocess module<a class="headerlink" href="#module-util.preprocess" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="util.preprocess.is_outlier">
 <code class="descclassname">util.preprocess.</code><code class="descname">is_outlier</code><span class="sig-paren">(</span><em>points</em>, <em>thresh=3.5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/preprocess.html#is_outlier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.preprocess.is_outlier" title="Permalink to this definition">¶</a></dt>
@@ -145,7 +165,7 @@ otherwise.</p>
 
 </div>
 <div class="section" id="module-util.read">
-<span id="util-read-utils-module"></span><h2>util.read_utils module<a class="headerlink" href="#module-util.read" title="Permalink to this headline">¶</a></h2>
+<span id="util-read-module"></span><h2>util.read module<a class="headerlink" href="#module-util.read" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="util.read.get_datetime_object">
 <code class="descclassname">util.read.</code><code class="descname">get_datetime_object</code><span class="sig-paren">(</span><em>orig_time</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/read.html#get_datetime_object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.read.get_datetime_object" title="Permalink to this definition">¶</a></dt>
@@ -231,7 +251,7 @@ This function is used to read those set number of lines and return them.</p>
 
 </div>
 <div class="section" id="module-util.layout">
-<span id="util-snaa-curve-fit-layout-module"></span><h2>util.snaa_curve_fit_layout module<a class="headerlink" href="#module-util.layout" title="Permalink to this headline">¶</a></h2>
+<span id="util-layout-module"></span><h2>util.layout module<a class="headerlink" href="#module-util.layout" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="util.layout.generate_curve_fit">
 <code class="descclassname">util.layout.</code><code class="descname">generate_curve_fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/layout.html#generate_curve_fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.layout.generate_curve_fit" title="Permalink to this definition">¶</a></dt>
@@ -301,13 +321,13 @@ Source: <a class="reference external" href="https://github.com/nryoung/algorithm
   <ul>
 <li><a class="reference internal" href="#">util package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-util.author">util.author_uid_map module</a></li>
+<li><a class="reference internal" href="#module-util.author">util.author module</a></li>
 <li><a class="reference internal" href="#module-util.custom_stopwords">util.custom_stopwords module</a></li>
-<li><a class="reference internal" href="#module-util.graph">util.graph_leaf_nodes module</a></li>
+<li><a class="reference internal" href="#module-util.graph">util.graph module</a></li>
 <li><a class="reference internal" href="#module-util.json_encoder">util.json_encoder module</a></li>
-<li><a class="reference internal" href="#module-util.preprocess">util.preprocessing_utils module</a></li>
-<li><a class="reference internal" href="#module-util.read">util.read_utils module</a></li>
-<li><a class="reference internal" href="#module-util.layout">util.snaa_curve_fit_layout module</a></li>
+<li><a class="reference internal" href="#module-util.preprocess">util.preprocess module</a></li>
+<li><a class="reference internal" href="#module-util.read">util.read module</a></li>
+<li><a class="reference internal" href="#module-util.layout">util.layout module</a></li>
 <li><a class="reference internal" href="#module-util.union_find">util.union_find module</a><ul>
 <li><a class="reference internal" href="#union-find-with-path-compression">Union Find with path compression</a></li>
 </ul>
