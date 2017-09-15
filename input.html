@@ -1,16 +1,13 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>input package &#8212; MailingListParser 0.1 documentation</title>
-    
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -24,13 +21,13 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="input.imap package" href="input.imap.html" />
     <link rel="prev" title="analysis.thread.graph package" href="analysis.thread.graph.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -47,7 +44,7 @@
           <a href="analysis.thread.graph.html" title="analysis.thread.graph package"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MailingListParser 0.1 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">Code for Documentation</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">Documentation for the Code</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -71,8 +68,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input.mbox.html">input.mbox package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="input.mbox.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="input.mbox.html#input-mbox-keyword-clustering-module">input.mbox.keyword_clustering module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="input.mbox.html#input-mbox-keyword-digest-module">input.mbox.keyword_digest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.mbox.html#module-input.mbox.keyword_clustering">input.mbox.keyword_clustering module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.mbox.html#module-input.mbox.keyword_digest">input.mbox.keyword_digest module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.mbox.html#module-input.mbox.mbox_hdr">input.mbox.mbox_hdr module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.mbox.html#module-input.mbox">Module contents</a></li>
 </ul>
@@ -90,14 +87,14 @@
 <code class="descclassname">input.check_headers.</code><code class="descname">add_missing_headers</code><span class="sig-paren">(</span><em>to_add=set()</em>, <em>unwanted_uid_filename='unwanted_uid.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/check_headers.html#add_missing_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.check_headers.add_missing_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function adds the mails that have been missed out, considering the fact that UIDs are consecutive.
 If a mail that is missing in the JSON file is not available or has been deleted, this function ignores that UID.
-:param to_add: A list of UIDs that need to be added. Default value is the list of missing mails&#8217; UIDs.</p>
+:param to_add: A list of UIDs that need to be added. Default value is the list of missing mails’ UIDs.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="input.check_headers.check_validity">
 <code class="descclassname">input.check_headers.</code><code class="descname">check_validity</code><span class="sig-paren">(</span><em>check_unavailable_uid='False'</em>, <em>json_header_filename='headers.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/check_headers.html#check_validity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.check_headers.check_validity" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function checks for and prints duplicate, missing, and invalid objects in the &#8220;headers.json&#8221; file.
-This function can be run first to generate a list of duplicate, missing, or invalid objects&#8217; UIDs which
+<dd><p>This function checks for and prints duplicate, missing, and invalid objects in the “headers.json” file.
+This function can be run first to generate a list of duplicate, missing, or invalid objects’ UIDs which
 can then be used to add or remove their entries from the JSON file.
 :return: Last UID that was checked by the function.</p>
 </dd></dl>
@@ -114,7 +111,7 @@ can then be used to add or remove their entries from the JSON file.
 <code class="descclassname">input.check_headers.</code><code class="descname">remove_duplicate_headers</code><span class="sig-paren">(</span><em>to_remove=set()</em>, <em>json_header_filename='headers.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/check_headers.html#remove_duplicate_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.check_headers.remove_duplicate_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function removes all the duplicate entries of the UIDs specified in the to_remove parameter. By default,
 it removes all the duplicate entries in the JSON file.
-:param to_remove: A list of UIDs that need to be removed. Default value is the list of duplicate mails&#8217; UIDs.</p>
+:param to_remove: A list of UIDs that need to be removed. Default value is the list of duplicate mails’ UIDs.</p>
 </dd></dl>
 
 <dl class="function">
@@ -122,7 +119,7 @@ it removes all the duplicate entries in the JSON file.
 <code class="descclassname">input.check_headers.</code><code class="descname">remove_unwanted_headers</code><span class="sig-paren">(</span><em>to_remove=set()</em>, <em>json_header_filename='headers.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/check_headers.html#remove_unwanted_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.check_headers.remove_unwanted_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function removes all the UIDs specified in the to_remove parameter. By default, it removes all the unwanted
 entries in the JSON file, i.e. the list of UIDs of mails that are not forwarded from LKML subscription.
-:param to_remove: A list of UIDs that need to be removed. Default value is the list of unwanted mails&#8217; UIDs</p>
+:param to_remove: A list of UIDs that need to be removed. Default value is the list of unwanted mails’ UIDs</p>
 </dd></dl>
 
 <dl class="function">
@@ -130,7 +127,7 @@ entries in the JSON file, i.e. the list of UIDs of mails that are not forwarded 
 <code class="descclassname">input.check_headers.</code><code class="descname">replace_invalid_headers</code><span class="sig-paren">(</span><em>to_replace=set()</em>, <em>json_header_filename='headers.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/check_headers.html#replace_invalid_headers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.check_headers.replace_invalid_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function removes the mail headers that have insufficient attributes and fetches those headers again.
 If an attribute is missing in the original mail header or if the mail has been deleted, this function ignores that UID.
-:param to_replace: A list of UIDs that need to be replaced. Default value is the list of invalid mails&#8217; UIDs.</p>
+:param to_replace: A list of UIDs that need to be replaced. Default value is the list of invalid mails’ UIDs.</p>
 </dd></dl>
 
 <dl class="function">
@@ -219,12 +216,12 @@ pairs of Message_ID and UID to the JSON file.
           <a href="analysis.thread.graph.html" title="analysis.thread.graph package"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MailingListParser 0.1 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >Code for Documentation</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="modules.html" >Documentation for the Code</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Prasad Talasila,Achyudh Ram.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
     </div>
   </body>
 </html>
