@@ -267,11 +267,20 @@ by this module.</p>
 <code class="descclassname">analysis.thread.wh_table.</code><code class="descname">generate_wh_table_threads</code><span class="sig-paren">(</span><em>nodelist_filename</em>, <em>edgelist_filename</em>, <em>output_filename</em>, <em>ignore_lat=False</em>, <em>time_limit=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/thread/wh_table.html#generate_wh_table_threads"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.thread.wh_table.generate_wh_table_threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate the thread width height table, which is a representation of the number of nodes in the graph that have a
 given height and a given number of children in a tabular form. This table provides an aggregate statistical view of
-all the discussion threads and is temporarily stored in a two dimensional array then written into a CSV file.
-:param ignore_lat: If true, then lone author threads are ignored.
-:param time_limit: All messages until this time are considered and all messages after this time are ignored. Time</p>
-<blockquote>
-<div>is specified as a string in one of the recognized formats.</div></blockquote>
+all the discussion threads and is temporarily stored in a two dimensional array then written into a CSV file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ignore_lat</strong> – If true, then lone author threads are ignored.</li>
+<li><strong>time_limit</strong> – All messages until this time are considered and all messages after this time are ignored. Time
+is specified as a string in one of the recognized formats.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>

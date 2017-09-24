@@ -72,36 +72,74 @@ the corresponding authors. A matrix is created out of these word lists such that
 all the authors and the column set contains the authors. If a term does not appear in a document, the corresponding
 matrix entry would be zero. The resulting matrix is called term-document matrix. Then tf-idf analysis is performed
 on the term-document matrix. Finally the top-10 words of each author is listed by their weight values.
-:param mbox_filename: Contains the absolute or relative address of the MBOX file to be opened
-:return: Term Document Matrix: The columns of the matrix are the users and the rows of the matrix are the keywords.
 Each entry corresponds to the tf-idf normalized coefficient of the keyword for a user. If a keyword is not present
 in the top-10 keywords of a user, then the corresponding matrix entry would be zero. Also returns the feature names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mbox_filename</strong> – Contains the absolute or relative address of the MBOX file to be opened.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Term Document Matrix: The columns of the matrix are the users and the rows of the matrix are the keywords.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="input.mbox.keyword_clustering.get_message_body">
 <code class="descclassname">input.mbox.keyword_clustering.</code><code class="descname">get_message_body</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/keyword_clustering.html#get_message_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.keyword_clustering.get_message_body" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Gets the message body of the message.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> – </td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> – The message whose body is to be extracted.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Message Body</td>
 </tr>
 </tbody>
 </table>
-<p>:return:Message Body</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="input.mbox.keyword_clustering.get_top_authors">
 <code class="descclassname">input.mbox.keyword_clustering.</code><code class="descname">get_top_authors</code><span class="sig-paren">(</span><em>top_n</em>, <em>json_filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/keyword_clustering.html#get_top_authors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.keyword_clustering.get_top_authors" title="Permalink to this definition">¶</a></dt>
-<dd><p>:return:Top authors and indices</p>
+<dd><p>Gets top n authors based on the ranking generated from generate_author_ranking in analysis.author.ranking</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>top_n</strong> – Number of top authors to be returned.</li>
+<li><strong>json_filename</strong> – The JSON file from which author scores are generated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Top authors and indices</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="input.mbox.keyword_clustering.save_sparse_csr">
 <code class="descclassname">input.mbox.keyword_clustering.</code><code class="descname">save_sparse_csr</code><span class="sig-paren">(</span><em>filename</em>, <em>array</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/keyword_clustering.html#save_sparse_csr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.keyword_clustering.save_sparse_csr" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This function writes a numpy matrix to a file in a sparse format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> – The file to store the matrix.</li>
+<li><strong>array</strong> – The numpy array.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </div>
 <div class="section" id="module-input.mbox.keyword_digest">
@@ -116,23 +154,31 @@ The words obtained are transformed using stemming or lemmatization before adding
 the corresponding authors. A matrix is created out of these word lists such that row set is the union of terms of
 all the authors and the column set contains the authors. If a term does not appear in a document, the corresponding
 matrix entry would be zero. The resulting matrix is called term-document matrix. Then tf-idf analysis is performed
-on the term-document matrix. Finally the top-10 words of each author is listed by their weight values.
-:param mbox_filename: Contains the absolute or relative address of the MBOX file to be opened
-:return: Term Document Matrix: The columns of the matrix are the users and the rows of the matrix are the keywords.
-Each entry corresponds to the tf-idf normalized coefficient of the keyword for a user. If a keyword is not present
+on the term-document matrix. Finally the top-10 words of each author is listed by their weight values.Each entry corresponds to the tf-idf normalized coefficient of the keyword for a user. If a keyword is not present
 in the top-10 keywords of a user, then the corresponding matrix entry would be zero. Also returns the feature names.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mbox_filename</strong> – Contains the absolute or relative address of the MBOX file to be opened</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Term Document Matrix: The columns of the matrix are the users and the rows of the matrix are the keywords.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="input.mbox.keyword_digest.get_message_body">
 <code class="descclassname">input.mbox.keyword_digest.</code><code class="descname">get_message_body</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/keyword_digest.html#get_message_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.keyword_digest.get_message_body" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Gets the message body of the message passed as a parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> – </td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> – The message whose body is to be extracted.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The message body from the message.</td>
 </tr>
 </tbody>
 </table>
@@ -141,13 +187,19 @@ in the top-10 keywords of a user, then the corresponding matrix entry would be z
 <dl class="function">
 <dt id="input.mbox.keyword_digest.get_top_authors">
 <code class="descclassname">input.mbox.keyword_digest.</code><code class="descname">get_top_authors</code><span class="sig-paren">(</span><em>top_n</em>, <em>json_filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/keyword_digest.html#get_top_authors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.keyword_digest.get_top_authors" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Gets the top n authors based on the ranking generated from generate_author_ranking in analysis.author.ranking</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>top_n</strong> – </td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>top_n</strong> – The number of top authors to be returned.</li>
+<li><strong>json_filename</strong> – The JSON file from which author scores are generated.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Top authors and their indices</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -156,13 +208,16 @@ in the top-10 keywords of a user, then the corresponding matrix entry would be z
 <dl class="function">
 <dt id="input.mbox.keyword_digest.save_sparse_csr">
 <code class="descclassname">input.mbox.keyword_digest.</code><code class="descname">save_sparse_csr</code><span class="sig-paren">(</span><em>filename</em>, <em>array</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/keyword_digest.html#save_sparse_csr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.keyword_digest.save_sparse_csr" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>This function writes a numpy matrix to a file,given as a parameter, in a sparse format.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> – </td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> – The file to store the matrix.</li>
+<li><strong>array</strong> – The numpy array.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -176,10 +231,23 @@ in the top-10 keywords of a user, then the corresponding matrix entry would be z
 <code class="descclassname">input.mbox.mbox_hdr.</code><code class="descname">extract_mail_header</code><span class="sig-paren">(</span><em>mbox_filename</em>, <em>json_filename='headers.json'</em>, <em>thread_uid_filename='thread_uid_map.json'</em>, <em>author_uid_filename='author_uid_map.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/input/mbox/mbox_hdr.html#extract_mail_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#input.mbox.mbox_hdr.extract_mail_header" title="Permalink to this definition">¶</a></dt>
 <dd><p>From the .MBOX file, this function extracts the header information is extracted using two predefined classes
 available in the Python Standard Library: Mailbox and Message, for accessing and manipulating on-disk mailboxes
-and the messages they contain respectively. The headers are then saved to a JSOn file. an unique Message-ID is
-provided to each message in the .MBOX file in the ascending order of their arrival times. The The mapping between
-the UIDs and Message-IDs are stored in another JSON file
-:param mbox_filename: Contains the absolue or relative address of the file to be opened</p>
+and the messages they contain respectively. The headers are then saved to a JSON file. an unique Message-ID is
+provided to each message in the .MBOX file in the ascending order of their arrival times. The mapping between
+the UIDs and Message-IDs are stored in another JSON file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mbox_filename</strong> – Contains the absolue or relative address of the file to be opened.</li>
+<li><strong>json_filename</strong> – The JSON file in which the extracted headers are stored.</li>
+<li><strong>thread_uid_filename</strong> – Contains a mapping between threads and UIDs.</li>
+<li><strong>author_uid_filename</strong> – Contains a mapping between authors and UIDs.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>

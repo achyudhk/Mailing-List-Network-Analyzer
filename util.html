@@ -148,14 +148,13 @@ the elements of the list in a single line.</p>
 <dl class="function">
 <dt id="util.preprocess.is_outlier">
 <code class="descclassname">util.preprocess.</code><code class="descname">is_outlier</code><span class="sig-paren">(</span><em>points</em>, <em>thresh=3.5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/util/preprocess.html#is_outlier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#util.preprocess.is_outlier" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a boolean array with True if points are outliers and False
-otherwise.</p>
+<dd><p>Returns a boolean array with True if points are outliers and False otherwise.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>points</strong> – An numobservations by numdimensions array of observations</li>
+<li><strong>points</strong> – An numobservations by numdimensions array of observations.</li>
 <li><strong>thresh</strong> – The modified z-score to use as a threshold. Observations with a modified z-score (based on the median absolute deviation) greater than this value will be classified as outliers.</li>
 </ul>
 </td>

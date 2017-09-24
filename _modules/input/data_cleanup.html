@@ -51,6 +51,13 @@
 
 
 <div class="viewcode-block" id="remove_invalid_references"><a class="viewcode-back" href="../../input.html#input.data_cleanup.remove_invalid_references">[docs]</a><span class="k">def</span> <span class="nf">remove_invalid_references</span><span class="p">(</span><span class="n">input_json_filename</span><span class="p">,</span> <span class="n">output_json_filename</span><span class="p">,</span> <span class="n">ref_toggle</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function is used to remove headers associated with invalid references.</span>
+<span class="sd">    </span>
+<span class="sd">    :param input_json_filename: The json file containing all the references.</span>
+<span class="sd">    :param output_json_filename: The output json without invalid references.</span>
+<span class="sd">    :param ref_toggle: If true, gets the reference list from &#39;References&#39; attribute.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># The &quot;unspecified_ref&quot; list is used to keep track of all those mails that have &#39;0&#39; in their reference list.</span>
     <span class="c1"># If any mail has any of the element in this list in its list of references, we can eliminate them as well</span>

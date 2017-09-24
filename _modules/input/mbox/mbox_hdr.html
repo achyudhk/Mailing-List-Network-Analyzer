@@ -54,13 +54,16 @@
 
 <div class="viewcode-block" id="extract_mail_header"><a class="viewcode-back" href="../../../input.mbox.html#input.mbox.mbox_hdr.extract_mail_header">[docs]</a><span class="k">def</span> <span class="nf">extract_mail_header</span><span class="p">(</span><span class="n">mbox_filename</span><span class="p">,</span> <span class="n">json_filename</span><span class="o">=</span><span class="s1">&#39;headers.json&#39;</span><span class="p">,</span> <span class="n">thread_uid_filename</span><span class="o">=</span><span class="s1">&#39;thread_uid_map.json&#39;</span><span class="p">,</span> <span class="n">author_uid_filename</span><span class="o">=</span><span class="s1">&#39;author_uid_map.json&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-
 <span class="sd">    From the .MBOX file, this function extracts the header information is extracted using two predefined classes</span>
 <span class="sd">    available in the Python Standard Library: Mailbox and Message, for accessing and manipulating on-disk mailboxes</span>
-<span class="sd">    and the messages they contain respectively. The headers are then saved to a JSOn file. an unique Message-ID is</span>
-<span class="sd">    provided to each message in the .MBOX file in the ascending order of their arrival times. The The mapping between</span>
-<span class="sd">    the UIDs and Message-IDs are stored in another JSON file</span>
-<span class="sd">    :param mbox_filename: Contains the absolue or relative address of the file to be opened</span>
+<span class="sd">    and the messages they contain respectively. The headers are then saved to a JSON file. an unique Message-ID is</span>
+<span class="sd">    provided to each message in the .MBOX file in the ascending order of their arrival times. The mapping between</span>
+<span class="sd">    the UIDs and Message-IDs are stored in another JSON file.</span>
+<span class="sd">    </span>
+<span class="sd">    :param mbox_filename: Contains the absolue or relative address of the file to be opened.</span>
+<span class="sd">    :param json_filename: The JSON file in which the extracted headers are stored.</span>
+<span class="sd">    :param thread_uid_filename: Contains a mapping between threads and UIDs.</span>
+<span class="sd">    :param author_uid_filename: Contains a mapping between authors and UIDs.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reading messages from MBOX file...&quot;</span><span class="p">)</span>
     <span class="n">mailbox_obj</span> <span class="o">=</span> <span class="n">mailbox</span><span class="o">.</span><span class="n">mbox</span><span class="p">(</span><span class="n">mbox_filename</span><span class="p">)</span>
@@ -137,7 +140,6 @@
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">author_uid_filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">map_file</span><span class="p">:</span>
         <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">author_uid_map</span><span class="p">,</span> <span class="n">map_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">map_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
-
 </pre></div>
 
           </div>
