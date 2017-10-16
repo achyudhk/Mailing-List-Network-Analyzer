@@ -65,28 +65,52 @@
 <dl class="function">
 <dt id="analysis.thread.graph.edge_list.generate_edge_list">
 <code class="descclassname">analysis.thread.graph.edge_list.</code><code class="descname">generate_edge_list</code><span class="sig-paren">(</span><em>nodelist_filename='graph_nodes.csv'</em>, <em>edgelist_filename='graph_edges.csv'</em>, <em>json_filename='clean_data.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/thread/graph/edge_list.html#generate_edge_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.thread.graph.edge_list.generate_edge_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a CSV file.
-:param ref_toggle: If True, References attribute is used to make edges and if False, In-Reply-To is used.</p>
+<dd><p>This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a CSV file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nodelist_filename</strong> – csv file to store the graph nodes.</li>
+<li><strong>edgelist_filename</strong> – csv file to store the graph edges.</li>
+<li><strong>json_filename</strong> – The JSON file containing the cleaned headers.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="analysis.thread.graph.edge_list.generate_node_labels">
 <code class="descclassname">analysis.thread.graph.edge_list.</code><code class="descname">generate_node_labels</code><span class="sig-paren">(</span><em>nodelist_filename='graph_nodes.txt'</em>, <em>edgelist_filename='graph_edges.txt'</em>, <em>json_filename='clean_data.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/thread/graph/edge_list.html#generate_node_labels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.thread.graph.edge_list.generate_node_labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a CSV file.
-:param ref_toggle: If True, References attribute is used to make edges and if False, In-Reply-To is used.</p>
+<dd><p>This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a TXT file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nodelist_filename</strong> – txt file to store the graph nodes.</li>
+<li><strong>edgelist_filename</strong> – txt file to store the graph edges.</li>
+<li><strong>json_filename</strong> – The JSON file containing the cleaned headers.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
 <div class="section" id="module-analysis.thread.graph.generate">
 <span id="analysis-thread-graph-generate-module"></span><h2>analysis.thread.graph.generate module<a class="headerlink" href="#module-analysis.thread.graph.generate" title="Permalink to this headline">¶</a></h2>
-<p>This module is used to generate a thread-wise view of the entire mailing list by saving the a graph representing the
-messages in a thread as a tree using the References and In-Reply-TO fields from the mail headers. The thread graphs are
-then saved to GEXF, DOT and PNG formats. All authors of a thread are identified and each author is given a unique color.
-All messages sent by this author get the same color.</p>
 <dl class="function">
 <dt id="analysis.thread.graph.generate.digraph">
 <code class="descclassname">analysis.thread.graph.generate.</code><code class="descname">digraph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/analysis/thread/graph/generate.html#digraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#analysis.thread.graph.generate.digraph" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This function is used to generate a thread-wise view of the entire mailing list by saving the a graph representing the
+messages in a thread as a tree using the References and In-Reply-TO fields from the mail headers. The thread graphs are
+then saved to GEXF, DOT and PNG formats. All authors of a thread are identified and each author is given a unique color.
+All messages sent by this author get the same color.</p>
+</dd></dl>
 
 </div>
 <div class="section" id="module-analysis.thread.graph">
@@ -161,7 +185,7 @@ All messages sent by this author get the same color.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Prasad Talasila,Achyudh Ram.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
   </body>
 </html>

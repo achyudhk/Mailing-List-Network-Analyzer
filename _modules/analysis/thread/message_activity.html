@@ -54,9 +54,10 @@
 
 <div class="viewcode-block" id="generate_weekly_message_activity_heatmap"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_weekly_message_activity_heatmap">[docs]</a><span class="k">def</span> <span class="nf">generate_weekly_message_activity_heatmap</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate weekly message activity heatmap from JSON data.</span>
 
-<span class="sd">    :param json_data:</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param json_data: Data for generating the heatmap.</span>
+<span class="sd">    :param filename: Heatmap file name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">heatmap_data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">48</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">msg_uid</span><span class="p">,</span> <span class="n">json_obj</span> <span class="ow">in</span> <span class="n">json_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -72,9 +73,10 @@
 
 <div class="viewcode-block" id="generate_monthly_message_activity_heatmap"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_monthly_message_activity_heatmap">[docs]</a><span class="k">def</span> <span class="nf">generate_monthly_message_activity_heatmap</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate monthly message activity heatmap from JSON data.</span>
 
-<span class="sd">    :param json_data:</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param json_data: Data for generating the heatmap.</span>
+<span class="sd">    :param filename: Heatmap file name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">heatmap_data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">48</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">msg_uid</span><span class="p">,</span> <span class="n">json_obj</span> <span class="ow">in</span> <span class="n">json_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -90,9 +92,10 @@
 
 <div class="viewcode-block" id="generate_daily_message_activity_timeline"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_daily_message_activity_timeline">[docs]</a><span class="k">def</span> <span class="nf">generate_daily_message_activity_timeline</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate daily message activity timeline from JSON data.</span>
 
-<span class="sd">    :param json_data:</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param json_data: Data for generating the timeline.</span>
+<span class="sd">    :param filename: Timeline file name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">timeline_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">48</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">msg_uid</span><span class="p">,</span> <span class="n">json_obj</span> <span class="ow">in</span> <span class="n">json_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -108,9 +111,10 @@
 
 <div class="viewcode-block" id="generate_weekly_message_activity_timeline"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_weekly_message_activity_timeline">[docs]</a><span class="k">def</span> <span class="nf">generate_weekly_message_activity_timeline</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate weekly message activity timeline from JSON data.</span>
 
-<span class="sd">    :param json_data:</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param json_data: Data for generating the timeline.</span>
+<span class="sd">    :param filename: Timeline file name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">timeline_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="o">*</span><span class="mi">24</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">msg_uid</span><span class="p">,</span> <span class="n">json_obj</span> <span class="ow">in</span> <span class="n">json_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -126,9 +130,10 @@
 
 <div class="viewcode-block" id="generate_monthly_message_activity_timeline"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_monthly_message_activity_timeline">[docs]</a><span class="k">def</span> <span class="nf">generate_monthly_message_activity_timeline</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate monthly message activity timeline from JSON data.</span>
 
-<span class="sd">    :param json_data:</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param json_data: Data for generating the timeline.</span>
+<span class="sd">    :param filename: Timeline file name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>	
     <span class="n">timeline_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="o">*</span><span class="mi">24</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">msg_uid</span><span class="p">,</span> <span class="n">json_obj</span> <span class="ow">in</span> <span class="n">json_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -144,9 +149,10 @@
 
 <div class="viewcode-block" id="generate_yearly_message_activity_timeline"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_yearly_message_activity_timeline">[docs]</a><span class="k">def</span> <span class="nf">generate_yearly_message_activity_timeline</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate yearly message activity timeline from JSON data.</span>
 
-<span class="sd">    :param json_data:</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param json_data: Data for generating the timeline.</span>
+<span class="sd">    :param filename: Timeline file name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">timeline_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">366</span><span class="o">*</span><span class="mi">24</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">msg_uid</span><span class="p">,</span> <span class="n">json_obj</span> <span class="ow">in</span> <span class="n">json_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -162,9 +168,11 @@
 
 <div class="viewcode-block" id="generate_message_activity_heatmaps"><a class="viewcode-back" href="../../../analysis.thread.html#analysis.thread.message_activity.generate_message_activity_heatmaps">[docs]</a><span class="k">def</span> <span class="nf">generate_message_activity_heatmaps</span><span class="p">(</span><span class="n">clean_headers_filename</span><span class="p">,</span> <span class="n">foldername</span><span class="p">,</span> <span class="n">timeline</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extract header information and call functions to generate various timelines or heatmaps.</span>
 
-<span class="sd">    :param</span>
-<span class="sd">    :return:</span>
+<span class="sd">    :param clean_headers_filename: The JSON file containing cleaned headers.</span>
+<span class="sd">    :param foldername: The MBOX folder.</span>
+<span class="sd">    :param timeline: True for generating timelines,False for heatmaps.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Time limit can be specified here in the form of a timestamp in one of the identifiable formats. All messages</span>
     <span class="c1"># that have arrived after time_ubound and before time_lbound will be ignored.</span>
@@ -264,7 +272,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Prasad Talasila,Achyudh Ram.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
   </body>
 </html>

@@ -46,16 +46,16 @@
           <div class="body" role="main">
             
   <h1>Source code for analysis.thread.graph.generate</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This module is used to generate a thread-wise view of the entire mailing list by saving the a graph representing the</span>
-<span class="sd">messages in a thread as a tree using the References and In-Reply-TO fields from the mail headers. The thread graphs are</span>
-<span class="sd">then saved to GEXF, DOT and PNG formats. All authors of a thread are identified and each author is given a unique color.</span>
-<span class="sd">All messages sent by this author get the same color.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 <span class="kn">from</span> <span class="nn">networkx.drawing.nx_agraph</span> <span class="k">import</span> <span class="o">*</span>
 
 <div class="viewcode-block" id="digraph"><a class="viewcode-back" href="../../../../analysis.thread.graph.html#analysis.thread.graph.generate.digraph">[docs]</a><span class="k">def</span> <span class="nf">digraph</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function is used to generate a thread-wise view of the entire mailing list by saving the a graph representing the</span>
+<span class="sd">    messages in a thread as a tree using the References and In-Reply-TO fields from the mail headers. The thread graphs are</span>
+<span class="sd">    then saved to GEXF, DOT and PNG formats. All authors of a thread are identified and each author is given a unique color.</span>
+<span class="sd">    All messages sent by this author get the same color.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">discussion_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
     <span class="n">color_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#ff0000&quot;</span><span class="p">,</span> <span class="s2">&quot;#005555&quot;</span><span class="p">,</span> <span class="s2">&quot;#b0b0ff&quot;</span><span class="p">,</span> <span class="s2">&quot;#e4e400&quot;</span><span class="p">,</span> <span class="s2">&quot;#0000ff&quot;</span><span class="p">,</span> <span class="s2">&quot;#ff00ff&quot;</span><span class="p">,</span> <span class="s2">&quot;#b000b0&quot;</span><span class="p">,</span> <span class="s2">&quot;#870087&quot;</span><span class="p">,</span> <span class="s2">&quot;#baba00&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;#878700&quot;</span><span class="p">,</span> <span class="s2">&quot;#545400&quot;</span><span class="p">,</span> <span class="s2">&quot;#00ff00&quot;</span><span class="p">,</span> <span class="s2">&quot;#8484ff&quot;</span><span class="p">,</span> <span class="s2">&quot;#b00000&quot;</span><span class="p">,</span> <span class="s2">&quot;#870000&quot;</span><span class="p">,</span> <span class="s2">&quot;#550000&quot;</span><span class="p">,</span> <span class="s2">&quot;#00b0b0&quot;</span><span class="p">,</span> <span class="s2">&quot;#008787&quot;</span><span class="p">,</span>
@@ -156,7 +156,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Prasad Talasila,Achyudh Ram.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
   </body>
 </html>

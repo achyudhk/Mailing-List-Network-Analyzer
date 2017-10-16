@@ -53,7 +53,10 @@
 <div class="viewcode-block" id="generate_edge_list"><a class="viewcode-back" href="../../../../analysis.thread.graph.html#analysis.thread.graph.edge_list.generate_edge_list">[docs]</a><span class="k">def</span> <span class="nf">generate_edge_list</span><span class="p">(</span><span class="n">nodelist_filename</span><span class="o">=</span><span class="s1">&#39;graph_nodes.csv&#39;</span><span class="p">,</span> <span class="n">edgelist_filename</span><span class="o">=</span><span class="s1">&#39;graph_edges.csv&#39;</span><span class="p">,</span> <span class="n">json_filename</span><span class="o">=</span><span class="s1">&#39;clean_data.json&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a CSV file.</span>
-<span class="sd">    :param ref_toggle: If True, References attribute is used to make edges and if False, In-Reply-To is used.</span>
+
+<span class="sd">    :param nodelist_filename: csv file to store the graph nodes.</span>
+<span class="sd">    :param edgelist_filename: csv file to store the graph edges.</span>
+<span class="sd">    :param json_filename: The JSON file containing the cleaned headers.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># The following set stores all the mail UIDs and the corresponding time as a semi-colon separated string</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -85,8 +88,12 @@
 
 <div class="viewcode-block" id="generate_node_labels"><a class="viewcode-back" href="../../../../analysis.thread.graph.html#analysis.thread.graph.edge_list.generate_node_labels">[docs]</a><span class="k">def</span> <span class="nf">generate_node_labels</span><span class="p">(</span><span class="n">nodelist_filename</span><span class="o">=</span><span class="s1">&#39;graph_nodes.txt&#39;</span><span class="p">,</span> <span class="n">edgelist_filename</span><span class="o">=</span><span class="s1">&#39;graph_edges.txt&#39;</span><span class="p">,</span> <span class="n">json_filename</span><span class="o">=</span><span class="s1">&#39;clean_data.json&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a CSV file.</span>
-<span class="sd">    :param ref_toggle: If True, References attribute is used to make edges and if False, In-Reply-To is used.</span>
+
+<span class="sd">    This function generates a list of nodes and edges in the graphs from the JSON file and saves it as a TXT file.</span>
+
+<span class="sd">    :param nodelist_filename: txt file to store the graph nodes.</span>
+<span class="sd">    :param edgelist_filename: txt file to store the graph edges.</span>
+<span class="sd">    :param json_filename: The JSON file containing the cleaned headers.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># The following set stores all the mail UIDs and the corresponding time as a semi-colon separated string</span>
     <span class="n">nodes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -150,7 +157,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Prasad Talasila,Achyudh Ram.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
   </body>
 </html>
